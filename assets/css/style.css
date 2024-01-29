@@ -1,3 +1,5 @@
+
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -11,7 +13,9 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+
 }
+
 
 header {
   text-align: center;
@@ -26,14 +30,15 @@ header {
   white-space: pre-wrap;
 }
 
+/* what is this for? */
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
+  /* white-space: pre-wrap; */
+  /* height: 80px; */
   border-top: 1px solid white;
 }
 
@@ -41,6 +46,8 @@ header {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  text-align: center;
+  padding: 10px;
 }
 
 .past {
