@@ -30,4 +30,29 @@ $('.description').each(function() {
 
 });
 
+// setting the colour of the time block
+
+currentHour = dayjs().hour();
+console.log(currentHour);
+
+$('.time-block').each(function () {
+    for (let index = 9; index < 18; index++) {
+    
+        if (index == currentHour) {
+        $('.time-block').addClass('present');
+        }
+
+        if (index < currentHour) {
+        $('.time-block').addClass('past');
+        }
+        if (index > currentHour) {
+        $('.time-block').addClass('future');
+        }
+        
+    }
+    
 });
+
+
+});
+
