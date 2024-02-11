@@ -18,4 +18,16 @@ $(document).ready(function() {
     
     }
     setNotes();
-})   
+
+
+// getting values from the local storage
+
+$('.description').each(function() {
+    var textId = $(this).attr('id');
+    console.log(textId);
+    var notes = localStorage.getItem(textId);
+    $(this).text(notes);
+
+});
+
+});
