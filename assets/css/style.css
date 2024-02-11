@@ -23,14 +23,16 @@ header {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
-  padding: 60px;
+  padding: 40px;
 }
+
+
+
 
 .description {
   white-space: pre-wrap;
 }
 
-/* what is this for? */
 .time-block {
   text-align: center;
   border-radius: 20px;
