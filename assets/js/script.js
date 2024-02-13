@@ -13,7 +13,6 @@ $(document).ready(function() {
         var textId = $(this).siblings('textarea').attr('id');
         var notes = $(this).siblings('textarea').val();
         localStorage.setItem(textId, notes);
-    
         });
     
     }
@@ -22,7 +21,7 @@ $(document).ready(function() {
 
 // getting values from the local storage
 
-$('.description').each(function() {
+$('textarea').each(function() {
     var textId = $(this).attr('id');
     console.log(textId);
     var notes = localStorage.getItem(textId);
@@ -32,27 +31,23 @@ $('.description').each(function() {
 
 // setting the colour of the time block
 
-currentHour = dayjs().hour();
+currentHour = dayjs().format('H');
 console.log(currentHour);
 
+
 $('.time-block').each(function () {
-    for (let index = 9; index < 18; index++) {
-    
-        if (index == currentHour) {
-        $('.time-block').addClass('present');
+    timeblockHour = $(this).attr('id');
+    hourNew = Number(timeblockHour);
+    console.log(hourNew); 
+        if (hourNew < currentHour) {
+            $(this).children('textarea').addClass('past');
+        } else if (hourNew == currentHour) {
+            $(this).children('textarea').addClass('present')
+        } else {
+            $(this).children('textarea').addClass('future')
         }
 
-        if (index < currentHour) {
-        $('.time-block').addClass('past');
-        }
-        if (index > currentHour) {
-        $('.time-block').addClass('future');
-        }
-        
-    }
-    
 });
-
 
 });
 

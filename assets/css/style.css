@@ -1,5 +1,4 @@
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -10,7 +9,7 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #000000 !important;
   border-left: 1px solid black;
   padding: 10px;
 
@@ -26,9 +25,6 @@ header {
   padding: 40px;
 }
 
-
-
-
 .description {
   white-space: pre-wrap;
 }
@@ -39,8 +35,6 @@ header {
 }
 
 .row {
-  /* white-space: pre-wrap; */
-  /* height: 80px; */
   border-top: 1px solid white;
 }
 
